@@ -34,7 +34,7 @@
 	    <a href="<?php echo url_for('job/show?id='.$JobeetJob->getId()) ?>">
 	      <?php echo $JobeetJob->getPosition() ?>
 	    </a></td>
-
+  <?php echo $JobeetJob->getId() ?></a></td>
   <td class="company"><?php echo $JobeetJob->getCompany() ?></td>
   
   <!--  <td><?php echo $JobeetJob->getCategoryId() ?></td>

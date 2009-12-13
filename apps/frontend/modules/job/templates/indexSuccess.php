@@ -35,7 +35,10 @@
 	      <?php echo $JobeetJob->getPosition() ?>
 	    </a></td>
 
-  <td class="company"><?php echo $JobeetJob->getCompany() ?></td>
+  <td class="company">
+
+ <a href="<?php echo  $JobeetJob->getUrl()  ?>">
+<?php echo $JobeetJob->getCompany() ?></td>
   
   <!--  <td><?php echo $JobeetJob->getCategoryId() ?></td>
 	<td><?php echo $JobeetJob->getType() ?></td>

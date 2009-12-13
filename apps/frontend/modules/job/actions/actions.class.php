@@ -1,4 +1,5 @@
 <?php
+// apps/frontend/modules/job/actions/actions.class.php
 
 /**
  * job actions.
@@ -17,11 +18,18 @@ class jobActions extends sfActions
       ->execute();
   }
 
-  public function executeShow(sfWebRequest $request)
-  {
-    $this->JobeetJob = Doctrine::getTable('JobeetJob')->find(array($request->getParameter('id')));
-    $this->forward404Unless($this->JobeetJob);
-  }
+//   public function executeShow(sfWebRequest $request)
+//   {
+//     $this->JobeetJob = Doctrine::getTable('JobeetJob')->find(array($request->getParameter('id')));
+//     $this->forward404Unless($this->JobeetJob);
+//   }
+
+public function executeShow(sfWebRequest $request)
+{
+  $this->JobeetJob = Doctrine::getTable('JobeetJob')-> find($request->getParameter('id'));
+  $this->forward404Unless($this->JobeetJob);
+}
+
 
   public function executeNew(sfWebRequest $request)
   {
